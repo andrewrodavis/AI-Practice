@@ -1,0 +1,32 @@
+MOVE-RIGHT
+MOVE-LEFT
+MOVE-UP
+MOVE-DOWN
+facts loaded.
+number of time steps, or <CR> for automatic: Info type: (2 = max, 0 or <CR> = min): Other: 'I' = look for irrelevants
+       'L' = Lower bound time needed by counting steps
+       'B' = Build up to goals
+       'E' = Don't do mutual exclusions (for testing)
+       'S' = examine subsets:      time: 1, 104 facts and 20 exclusive pairs.
+time: 2, 114 facts and 68 exclusive pairs.
+time: 3, 122 facts and 130 exclusive pairs.
+time: 4, 128 facts and 190 exclusive pairs.
+time: 5, 129 facts and 204 exclusive pairs.
+time: 6, 130 facts and 224 exclusive pairs.
+Goals first reachable in 6 steps.
+1674 nodes created.
+goals at time 7:
+  front_X0_36 
+
+1 MOVE-DOWN_B1_36_23_10
+2 MOVE-RIGHT_Q1_6_8_10
+2 MOVE-DOWN_B1_49_36_23
+3 MOVE-DOWN_B1_62_49_36
+3 MOVE-UP_C1_32_19_6
+4 MOVE-RIGHT_X0_28_30_32
+5 MOVE-RIGHT_X0_30_32_34
+6 MOVE-RIGHT_X0_32_34_36
+0 entries in hash table, 
+5 total set-creation steps (entries + hits + plan length - 1).
+8 actions tried
+  0.06 secs

@@ -1,0 +1,31 @@
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 2 at 0.01 (+ 0.00) seconds.
+% Length of proof is 20.
+% Level of proof is 5.
+% Maximum clause weight is 9.
+% Given clauses 12.
+
+1 Sister(x,y) -> Siblings(x,y) # label(non_clause).  [assumption].
+3 Brother(x,y) & Female(y) -> Sister(y,x) # label(non_clause).  [assumption].
+4 Siblings(x,y) & Uncle(z,y) -> Uncle(z,x) # label(non_clause).  [assumption].
+6 Uncle(x,y) & Aunt(z,y) -> Married(x,z) # label(non_clause).  [assumption].
+9 Married(John,Mary) # label(non_clause) # label(goal).  [goal].
+14 -Uncle(x,y) | -Aunt(z,y) | Married(x,z).  [clausify(6)].
+15 Aunt(Mary,Amy).  [assumption].
+18 -Brother(x,y) | -Female(y) | Sister(y,x).  [clausify(3)].
+19 Female(Amy).  [assumption].
+21 Brother(Jack,Amy).  [assumption].
+24 -Brother(x,Amy) | Sister(Amy,x).  [resolve(18,b,19,a)].
+25 Sister(Amy,Jack).  [resolve(24,a,21,a)].
+26 -Sister(x,y) | Siblings(x,y).  [clausify(1)].
+27 Uncle(John,Jack).  [assumption].
+28 -Siblings(x,y) | -Uncle(z,y) | Uncle(z,x).  [clausify(4)].
+31 -Married(John,Mary).  [deny(9)].
+34 -Uncle(x,Amy) | Married(x,Mary).  [resolve(14,b,15,a)].
+39 Siblings(Amy,Jack).  [resolve(25,a,26,a)].
+45 -Uncle(John,Amy).  [resolve(34,b,31,a)].
+53 $F.  [ur(28,a,39,a,b,27,a),unit_del(a,45)].
+
+============================== end of proof ==========================

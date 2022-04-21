@@ -1,0 +1,49 @@
+#
+(operator
+  MOVE-RIGHT
+  (params (<ob1> OBJECT) (<x> OBJECT) (<y> OBJECT) (<z> OBJECT))
+  (preconds
+    (front <ob1> <y>) (clear <z>)
+    (horizontal <ob1>)
+    (right-of <x> <y>) (right-of <y> <z>))
+  (effects
+    (front <ob1> <z>) (clear <x>)
+    (horizontal <ob1>)
+    (right-of <x> <y>) (right-of <y> <z>)))
+
+(operator
+  MOVE-LEFT
+  (params (<ob1> OBJECT) (<x> OBJECT) (<y> OBJECT) (<z> OBJECT))
+  (preconds
+    (front <ob1> <z>) (clear <x>)
+    (horizontal <ob1>)
+    (right-of <x> <y>) (right-of <y> <z>))
+  (effects
+    (front <ob1> <y>) (clear <z>)
+    (horizontal <ob1>)
+    (right-of <x> <y>) (right-of <y> <z>)))
+
+(operator
+  MOVE-UP
+  (params (<ob1> OBJECT) (<x> OBJECT) (<y> OBJECT) (<z> OBJECT))
+  (preconds
+    (front <ob1> <y>) (clear <z>)
+    (vertical <ob1>)
+    (above <x> <y>) (above <y> <z>))
+  (effects
+    (front <ob1> <z>) (clear <x>)
+    (vertical <ob1>)
+    (above <x> <y>) (above <y> <z>)))
+
+(operator
+  MOVE-DOWN
+  (params (<ob1> OBJECT) (<x> OBJECT) (<y> OBJECT) (<z> OBJECT))
+  (preconds
+    (front <ob1> <z>) (clear <x>)
+    (vertical <ob1>)
+    (above <x> <y>) (above <y> <z>))
+  (effects
+    (front <ob1> <y>) (clear <z>)
+    (vertical <ob1>)
+    (above <x> <y>) (above <y> <z>)))
+
