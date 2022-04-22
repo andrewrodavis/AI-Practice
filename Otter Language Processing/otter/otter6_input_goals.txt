@@ -1,6 +1,0 @@
-Married(John, Mary).
-Aunt(Mary, Jack).
-exists x (Siblings(Jack, x) & Uncle(John, x)).
-Brother(Bill, Amy).
-Uncle(John, Bill) & Siblings(Bill, Jack).
-
